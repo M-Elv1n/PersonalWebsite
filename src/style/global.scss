@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    color: #fff;
+}
+
+#root{
+    min-height: 100vh;
+}
+
+body {
+    background-color: #000;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+@mixin d-flex($justify: center, $align: center, $direction: row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}

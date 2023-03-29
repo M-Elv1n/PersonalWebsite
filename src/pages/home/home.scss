@@ -1,0 +1,96 @@
+@import '../../style/global.scss';
+
+.home {
+    height: calc(100vh - 50px);
+    margin-top: 200px;
+
+    &--content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .home--image {
+            position: absolute;
+            top: 11%;
+            left: 3%;
+
+            img {
+                height: 400px;
+            }
+        }
+
+        .home--desc {
+            @include d-flex(center, center, column);
+            text-align: center;
+
+            img {
+                position: absolute;
+
+            }
+
+            h1 {
+                font-size: 5rem;
+                width: 800px;
+                font-weight: 900;
+                text-align: center;
+            }
+
+            &>p {
+                font-weight: 300;
+                width: 693px;
+            }
+
+            &__actions {
+                margin-top: 20px;
+                @include d-flex;
+                gap: 20px;
+
+                button {
+                    border: 1px solid transparent;
+                    outline: none;
+                    padding: 12px 30px;
+                    border-radius: 10px;
+                    font-size: 1rem;
+                    cursor: pointer;
+                    transition: .3s linear;
+
+                    &.about {
+                        background-color: #FDB827;
+                        color: #000;
+
+                        &:hover {
+                            background-color: #000;
+                            color: #FDB827;
+                            border: 1px solid #FDB827;
+                        }
+
+                    }
+
+                    &.portfolios {
+                        background-color: #212121;
+
+                        &:hover {
+                            background-color: #fff;
+                            color: #212121;
+                            border: #212121;
+                        }
+                    }
+
+                }
+
+            }
+        }
+    }
+
+    &-deco {
+        position: absolute;
+        bottom: -201px;
+        right: 9%;
+
+        img {
+            height: 400px;
+
+        }
+    }
+}

@@ -1,0 +1,64 @@
+@import '../../style/global.scss';
+
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616cd;
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backdrop-filter: blur(10px) grayscale(80%);
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        li {
+            a {
+                color: #fff;
+                font-weight: 500;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    height: 5px;
+                    width: 5px;
+                    background-color: rgb(254, 186, 60);
+                    top: 50%;
+                    left: -10px;
+                    transform: translateY(-50%);
+                    position: absolute;
+                    border-radius: 50%;
+                    opacity: 0;
+                    transition: .3s;
+                }
+
+                &:hover {
+                    &::after {
+                        opacity: 1;
+                    }
+                }
+
+                &.active::after {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+//     text-decoration: none;
+//     list-style: none;
+//     font-family: 'Montserrat', sans-serif;
+//     font-style: normal;
+// }
